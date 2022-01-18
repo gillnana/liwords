@@ -13,7 +13,7 @@ export const BioCard = React.memo((props: BioProps) => {
   const { useState } = useMountedState();
   const { loginState } = useLoginStateStoreContext();
   const { username: viewer } = loginState;
-  const { username } = useParams();
+  const { username } = useParams<{username: string}>();
 
   const [latestBio, setLatestBio] = useState('');
 
